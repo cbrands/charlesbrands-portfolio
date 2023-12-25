@@ -1,0 +1,12 @@
+---
+import Head from './Head.astro'
+import { SITE_TITLE, DESCRIPTION } from '../consts'
+---
+
+<!doctype html>
+<html lang="en">
+  <Head {SITE_TITLE} {DESCRIPTION} />
+  <body>
+    <slot />
+  </body>
+</html>
