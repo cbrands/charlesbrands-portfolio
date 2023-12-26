@@ -1,12 +1,18 @@
 ---
 import Head from './Head.astro'
 import { SITE_TITLE, DESCRIPTION } from '../consts'
+import Header from '../components/Header.astro'
+import Footer from '../components/Footer.astro'
 ---
 
 <!doctype html>
 <html lang="en">
   <Head {SITE_TITLE} {DESCRIPTION} />
-  <body>
+  <body
+    class="text-teal-100 bg-teal-950 min-h-screen grid grid-rows-[auto,1fr,auto]"
+  >
+    <Header />
     <slot />
+    <Footer />
   </body>
 </html>

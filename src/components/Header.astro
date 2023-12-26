@@ -1,0 +1,23 @@
+---
+import Link from './Link.astro'
+---
+
+<div class="flex justify-between items-center py-4 max-w-7xl mx-auto w-full">
+  <header>
+    <Link href="/" text="Charles Brands" />
+  </header>
+  <nav>
+    <ul class="flex gap-4">
+      <li><Link href="/" text="Home" /></li>
+      <li><Link href="/projects" text="Projects" /></li>
+      <li>
+        <Link
+          href="https://github.com/cbrands"
+          text="GitHub"
+          isExternal
+          isBlank
+        />
+      </li>
+    </ul>
+  </nav>
+</div>

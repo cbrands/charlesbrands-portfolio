@@ -1,0 +1,28 @@
+---
+interface Props {
+  href: string
+  text: string
+  rel?: string
+  target?: string
+  isBlank?: boolean
+  isExternal?: boolean
+  class?: string
+}
+
+const {
+  href,
+  text,
+  class: classList,
+  isExternal,
+  rel = '',
+  target = '',
+  isBlank,
+} = Astro.props
+---
+
+<a
+  href={href}
+  class:list={['hover:text-teal-500', classList]}
+  rel={`${rel}${isExternal ? ' nofollow noopener noreferrer external' : ''}`}
+  target={`${target}${isBlank ? '_blank' : '_self'}`}>{text}</a
+>
